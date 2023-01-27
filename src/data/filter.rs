@@ -4,7 +4,7 @@ pub fn hour(data:Vec<CarPark>, hour: String) -> Vec<CarPark> {
     let mut samples:Vec<CarPark> = Vec::new();
 
     for e in data {
-        let (date,time) = e.moment.split_once(" ").unwrap();
+        let (_date,time) = e.moment.split_once(" ").unwrap();
         if time.split(":").next().unwrap().contains(&hour) {
             samples.push(e);
         }
